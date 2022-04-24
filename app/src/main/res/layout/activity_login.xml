@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
     <Button
-        android:id="@+id/logIn"
+        android:id="@+id/toHome"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -132,7 +132,7 @@
         app:layout_constraintBottom_toTopOf="@+id/signUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logIn" />
+        app:layout_constraintTop_toBottomOf="@+id/toHome" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -143,7 +143,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView6"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logIn"
+        app:layout_constraintTop_toBottomOf="@+id/toHome"
         app:layout_constraintVertical_bias="0.54"
         app:srcCompat="@drawable/ic_line_6" />
 
@@ -156,6 +156,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/logIn"
+        app:layout_constraintTop_toBottomOf="@+id/toHome"
         app:srcCompat="@drawable/ic_line_6" />
 </androidx.constraintlayout.widget.ConstraintLayout>
