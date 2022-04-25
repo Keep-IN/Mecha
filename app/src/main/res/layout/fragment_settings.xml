@@ -6,15 +6,309 @@
     android:layout_height="match_parent"
     tools:context=".SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="243dp"
-        android:layout_height="93dp"
-        android:text="Settings Fragment"
-        android:textSize="24sp"
+    <ImageView
+        android:id="@+id/bg_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_setting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".60"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_view_setting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <RelativeLayout
+            android:id="@+id/rl_setting"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:id="@+id/img_setting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/img_setting" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_setting"
+                android:layout_alignBottom="@id/img_setting"
+                android:layout_marginStart="16dp"
+                android:layout_toStartOf="@id/img_arrow_forward1"
+                android:layout_toEndOf="@id/img_setting"
+                android:fontFamily="@font/poppins"
+                android:gravity=""
+                android:text="Settings"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/img_arrow_forward1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/img_setting"
+                android:layout_alignBottom="@+id/img_setting"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/img_arrow_forward" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_notification"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_setting"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:id="@+id/img_notification"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/img_notification" />
+
+            <TextView
+                android:id="@+id/tv_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_notification"
+                android:layout_alignBottom="@id/img_notification"
+                android:layout_marginStart="16dp"
+                android:layout_toStartOf="@id/img_arrow_forward2"
+                android:layout_toEndOf="@id/img_notification"
+                android:fontFamily="@font/poppins"
+                android:gravity=""
+                android:text="Notification"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/img_arrow_forward2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/img_notification"
+                android:layout_alignBottom="@+id/img_notification"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/img_arrow_forward" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_help"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_notification"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:id="@+id/img_help"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/img_help" />
+
+            <TextView
+                android:id="@+id/tv_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_help"
+                android:layout_alignBottom="@id/img_help"
+                android:layout_marginStart="16dp"
+                android:layout_toStartOf="@id/img_arrow_forward3"
+                android:layout_toEndOf="@id/img_help"
+                android:fontFamily="@font/poppins"
+                android:gravity=""
+                android:text="Help"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/img_arrow_forward3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/img_help"
+                android:layout_alignBottom="@+id/img_help"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/img_arrow_forward" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_feedback"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_help"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:id="@+id/img_feedback"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/img_feedback" />
+
+            <TextView
+                android:id="@+id/tv_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_feedback"
+                android:layout_alignBottom="@id/img_feedback"
+                android:layout_marginStart="16dp"
+                android:layout_toStartOf="@id/img_arrow_forward4"
+                android:layout_toEndOf="@id/img_feedback"
+                android:fontFamily="@font/poppins"
+                android:gravity=""
+                android:text="Feedback"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/img_arrow_forward4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/img_feedback"
+                android:layout_alignBottom="@+id/img_feedback"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/img_arrow_forward" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_logout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_feedback"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/img_logout" />
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_logout"
+                android:layout_alignBottom="@id/img_logout"
+                android:layout_marginStart="16dp"
+                android:layout_toStartOf="@id/img_arrow_forward5"
+                android:layout_toEndOf="@id/img_logout"
+                android:fontFamily="@font/poppins"
+                android:gravity=""
+                android:text="Logout"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/img_arrow_forward5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/img_logout"
+                android:layout_alignBottom="@+id/img_logout"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/img_arrow_forward" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/profile_setting"
+        app:layout_constraintBottom_toTopOf="@id/constraint_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".3" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Username"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintVertical_bias=".1" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins"
+        android:text="username123@gmail.com"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="@color/white"
+        android:text="Edit"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
