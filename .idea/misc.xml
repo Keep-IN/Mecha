@@ -23,8 +23,10 @@
         <entry key="..\:/ProjectAndroidStudio/JAVA/Mecha/app/src/main/res/layout/activity_login.xml" value="0.23229166666666667" />
         <entry key="..\:/ProjectAndroidStudio/JAVA/Mecha/app/src/main/res/layout/activity_profile_settings.xml" value="0.2" />
         <entry key="..\:/ProjectAndroidStudio/JAVA/Mecha/app/src/main/res/layout/activity_singup.xml" value="0.23229166666666667" />
+        <entry key="..\:/ProjectAndroidStudio/JAVA/Mecha/app/src/main/res/layout/fragment_history.xml" value="0.15364583333333334" />
         <entry key="..\:/ProjectAndroidStudio/JAVA/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/ProjectAndroidStudio/JAVA/Mecha/app/src/main/res/layout/fragment_settings.xml" value="0.23229166666666667" />
+        <entry key="..\:/ProjectAndroidStudio/JAVA/Mecha/app/src/main/res/layout/fragment_shop.xml" value="0.2" />
       </map>
     </option>
   </component>
