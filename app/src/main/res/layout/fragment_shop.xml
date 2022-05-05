@@ -48,113 +48,435 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fillViewport="true"
+        android:layout_height="match_parent"
+        android:layout_marginTop="166dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_product">
 
         <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            app:columnCount="2">
 
-            <View
-                android:id="@+id/view"
-                android:layout_width="139dp"
-                android:layout_height="155dp"
-                app:layout_column="0"
-                app:layout_row="0" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view1"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_item_shop"
+                app:cardCornerRadius="10dp">
 
-            <View
-                android:id="@+id/view4"
-                android:layout_width="139dp"
-                android:layout_height="155dp"
-                app:layout_column="0"
-                app:layout_row="1" />
+                <RelativeLayout
+                    android:id="@+id/btn_rl_oli"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="139dp"
-                android:layout_height="155dp"
-                app:layout_column="1"
-                app:layout_row="0" />
+                    <ImageView
+                        android:id="@+id/oli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/item1"
+                        tools:ignore="ContentDescription" />
 
-            <View
-                android:id="@+id/view5"
-                android:layout_width="139dp"
-                android:layout_height="155dp"
-                app:layout_column="1"
-                app:layout_row="1" />
+                    <TextView
+                        android:id="@+id/tv_oli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Oli"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
-            <View
-                android:id="@+id/view3"
-                android:layout_width="139dp"
-                android:layout_height="155dp"
-                app:layout_column="2"
-                app:layout_row="0" />
+                    <TextView
+                        android:id="@+id/tv_rp_oli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rp 40.000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
-            <View
-                android:id="@+id/view6"
-                android:layout_width="139dp"
-                android:layout_height="155dp"
-                app:layout_column="2"
-                app:layout_row="1" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view2"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_item_shop"
+                app:cardCornerRadius="10dp">
 
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="111dp"
-                android:layout_height="113dp"
-                android:layout_marginLeft="10sp"
-                android:src="@drawable/item1"
-                app:layout_column="0"
-                app:layout_row="0" />
+                <RelativeLayout
+                    android:id="@+id/btn_rl_aki"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="111dp"
-                android:layout_height="113dp"
-                android:layout_marginLeft="10sp"
-                android:src="@drawable/item1"
-                app:layout_column="1"
-                app:layout_row="0" />
+                    <ImageView
+                        android:id="@+id/aki"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_aki"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="111dp"
-                android:layout_height="113dp"
-                android:layout_marginLeft="10sp"
-                android:src="@drawable/item1"
-                app:layout_column="1"
-                app:layout_row="1" />
+                    <TextView
+                        android:id="@+id/tv_aki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Aki"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="111dp"
-                android:layout_height="113dp"
-                android:layout_marginLeft="10sp"
-                android:src="@drawable/item1"
-                app:layout_column="0"
-                app:layout_row="1" />
+                    <TextView
+                        android:id="@+id/tv_rp_aki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rp 155.000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:id="@+id/imageView13"
-                android:layout_width="111dp"
-                android:layout_height="113dp"
-                android:layout_marginLeft="10sp"
-                android:src="@drawable/item1"
-                app:layout_column="2"
-                app:layout_row="1" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view3"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_item_shop"
+                app:cardCornerRadius="10dp">
 
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="111dp"
-                android:layout_height="113dp"
-                android:layout_marginLeft="10sp"
-                android:src="@drawable/item1"
-                app:layout_column="2"
-                app:layout_row="0" />
+                <RelativeLayout
+                    android:id="@+id/btn_rl_rantai"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/rantai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_pelumas_rantai"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_rantai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Pelumas Rantai"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_rp_rantai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rp 40.000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view4"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_item_shop"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/btn_rl_rem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/rem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_kampas_rem"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_rem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Kampas Rem"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_rp_rem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rp 30.000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view5"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_item_shop"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/btn_rl_lampu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/lampu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_lampu_motor"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_lampu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Lampu LED Motor"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_rp_lampu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rp 289.000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view6"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_item_shop"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/btn_rl_kunci"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/kunci"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_kunci_perkakas"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_kunci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Kunci Perkakas"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_rp_kunci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rp 875.000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view7"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_item_shop"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/btn_rl_obeng"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/obeng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_obeng"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_obeng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Obeng"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_rp_obeng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rp 30.000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view8"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_item_shop"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/btn_rl_mesin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/mesin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_mesin_motor"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_mesin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Mesin Motor"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_rp_mesin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rp 700.000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
         </androidx.gridlayout.widget.GridLayout>
     </ScrollView>
 
