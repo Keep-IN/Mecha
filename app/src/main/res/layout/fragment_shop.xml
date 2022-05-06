@@ -110,6 +110,19 @@
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_oli"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/check_box_selector"
+                        android:button="@android:color/transparent"
+                        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -162,6 +175,19 @@
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_aki"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/check_box_selector"
+                        android:button="@android:color/transparent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -214,6 +240,19 @@
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_rantai"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/check_box_selector"
+                        android:button="@android:color/transparent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -266,6 +305,19 @@
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_rem"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/check_box_selector"
+                        android:button="@android:color/transparent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -318,6 +370,18 @@
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_lampu"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/check_box_selector"
+                        android:button="@android:color/transparent" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -370,6 +434,18 @@
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_kunci"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/check_box_selector"
+                        android:button="@android:color/transparent" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -422,6 +498,18 @@
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_obeng"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/check_box_selector"
+                        android:button="@android:color/transparent" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -474,6 +562,18 @@
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_mesin"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/check_box_selector"
+                        android:button="@android:color/transparent" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
