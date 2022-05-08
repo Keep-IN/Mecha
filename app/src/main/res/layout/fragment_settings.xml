@@ -8,10 +8,10 @@
 
     <ImageView
         android:id="@+id/bg_setting"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="419dp"
+        android:layout_height="513dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg_setting"
+        android:src="@drawable/ic_group_1432"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".60"
