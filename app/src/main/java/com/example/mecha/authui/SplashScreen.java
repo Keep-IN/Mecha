@@ -1,15 +1,13 @@
-package com.example.mecha;
+package com.example.mecha.authui;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
+
+import com.example.mecha.R;
 
 public class SplashScreen extends AppCompatActivity {
 
