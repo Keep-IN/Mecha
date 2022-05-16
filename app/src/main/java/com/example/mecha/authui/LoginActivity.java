@@ -4,29 +4,40 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mecha.HomeActivity;
 import com.example.mecha.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 
 public class LoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
+    EditText et_password, et_email;
     Button loginButton;
     Button signUpButton;
     TextView forgotPasswordText;
+    Spinner roleUserDropdown;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Spinner roleUserDropdown = (Spinner) findViewById(R.id.roleUserDropdown);
+        mAuth = FirebaseAuth.getInstance();
+        et_email = findViewById(R.id.et_email);
+        et_password = findViewById(R.id.et_password);
+        roleUserDropdown = (Spinner) findViewById(R.id.roleUserDropdown);
         loginButton = findViewById(R.id.loginButton);
         forgotPasswordText = findViewById(R.id.forgotPasswordText);
         signUpButton = findViewById(R.id.signUpButton);
@@ -43,9 +54,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
-                finish();
+                loginUser();
             }
         });
 
@@ -74,5 +83,50 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    private void loginUser() {
+        EditText et_email = findViewById(R.id.et_email);
+        EditText et_password = findViewById(R.id.et_password);
+
+        String email = et_email.getText().toString();
+        String password = et_password.getText().toString();
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            et_email.setError("Email tidak valid !");
+            et_email.requestFocus();
+            return;
+        }
+        if (password.isEmpty()) {
+            et_email.setError("Tidak boleh kosong!");
+            et_email.requestFocus();
+            return;
+        }
+        if (email.isEmpty()) {
+            et_email.setError("Tidak boleh kosong!");
+            et_email.requestFocus();
+            return;
+        }
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                    @Override
+                    public void onSuccess(AuthResult authResult) {
+//                        checkLevel(authResult.getUser().getUid());
+                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+            finish();
+                    }
+                });
+//        private void checkLevel (String uid){
+//            DocumentReference df = mstore.collection("Users").document(uid);
+//            df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                @Override
+//                public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                    Log.d(TAG, "onSuccess: " + documentSnapshot.getData());
+//                    if (documentSnapshot.getString("isUser") != null)
+//                        startActivity(new Intent(signin.this, HomePencariKerjaActivity.class));
+//                    finish();
+//                }
+//            });
+//        }
     }
 }

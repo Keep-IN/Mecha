@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "923501648965",
+    "project_id": "mecha-bc6cf",
+    "storage_bucket": "mecha-bc6cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923501648965:android:10276f755f559ad24b972c",
+        "android_client_info": {
+          "package_name": "com.example.mecha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923501648965-q56uf8256dhcf219m53a53sqi84c31lb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtErL3Ob6JhykS_S1NA3jC8BLl9Q8_8Xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923501648965-q56uf8256dhcf219m53a53sqi84c31lb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

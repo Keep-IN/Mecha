@@ -71,7 +71,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/et_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -82,7 +82,7 @@
                 android:padding="10dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName7"
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -93,18 +93,17 @@
                 android:padding="10dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName11"
+                android:id="@+id/et_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/custom_input"
                 android:ems="10"
                 android:hint="Address"
-                android:inputType="textEmailAddress"
                 android:padding="10dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName8"
+                android:id="@+id/et_telepon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -115,7 +114,7 @@
                 android:padding="10dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName9"
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -126,7 +125,7 @@
                 android:padding="10dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName10"
+                android:id="@+id/et_repassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
