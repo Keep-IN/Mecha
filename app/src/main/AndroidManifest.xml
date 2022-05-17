@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mecha">
         <activity
+            android:name=".authui.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authui.SignUpMechActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authui.SignUpChooseRoleActivity"
+            android:exported="false" />
+        <activity
             android:name=".FixActivity"
             android:exported="false" />
         <activity
@@ -40,16 +49,16 @@
             android:exported="false"
             android:label="@string/title_activity_call_mecha" />
         <activity
-            android:name=".SingupActivity"
+            android:name=".authui.SignUpCustomerActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".authui.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".authui.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,7 +67,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".authui.MainActivity"
             android:exported="false" />
 
         <meta-data
