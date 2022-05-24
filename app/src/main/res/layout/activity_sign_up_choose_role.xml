@@ -13,19 +13,19 @@
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_back"/>
+        android:background="@drawable/ic_back_white" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="127dp"
+        android:layout_below="@id/btnBack"
         android:layout_centerHorizontal="true"
-        android:text="Choose your \n Sign Up Role"
-        android:textColor="#1BCABB"
-        android:textSize="24sp"
+        android:layout_marginTop="127dp"
         android:fontFamily="@font/poppins_semibold"
-        android:layout_below="@id/btnBack"/>
+        android:text="Choose your \n Sign Up Role"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
