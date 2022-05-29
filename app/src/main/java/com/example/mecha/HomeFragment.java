@@ -72,7 +72,7 @@ public class HomeFragment extends Fragment {
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent backHome = new Intent(getActivity(), FixActivity.class);
+                Intent backHome = new Intent(getActivity(), EmergencyFixActivity.class);
                 startActivity(backHome);
             }
         });

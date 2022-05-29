@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_rectangle_323"
-        android:paddingVertical="20dp"
-        android:paddingHorizontal="20dp">
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp">
 
         <TextView
             android:id="@+id/textView5"
@@ -174,13 +174,13 @@
                                 android:textSize="20sp"/>
 
                             <TextView
-                                android:layout_below="@id/emergencyFixTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="Calling the nearest mechanic to \n make real-time motorcycle repairs"
+                                android:layout_below="@id/emergencyFixTitle"
                                 android:fontFamily="@font/poppins"
+                                android:text="Calling the nearest mechanic to \n make real-time motorcycle repairs"
                                 android:textColor="@color/white"
-                                android:textSize="12sp"/>
+                                android:textSize="12sp" />
 
                         </RelativeLayout>
 
@@ -195,6 +195,7 @@
                     </androidx.gridlayout.widget.GridLayout>
 
                 </androidx.cardview.widget.CardView>
+
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fixTireBtn"
