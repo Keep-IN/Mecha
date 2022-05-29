@@ -3,6 +3,7 @@ package com.example.mecha;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import android.widget.ImageButton;
  */
 public class HomeFragment extends Fragment {
 
-    ImageButton btnEdit;
+    CardView btnEdit;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -71,7 +72,7 @@ public class HomeFragment extends Fragment {
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent backHome = new Intent(getActivity(), FixActivity.class);
+                Intent backHome = new Intent(getActivity(), EmergencyFixActivity.class);
                 startActivity(backHome);
             }
         });
