@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
+    tools:context=".customer.home.HomeFragment"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="17dp">
 
@@ -144,7 +144,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fixBikeBtn"
+                    android:id="@+id/emergencyFixBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardBackgroundColor="#1BCABB"
@@ -198,7 +198,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fixTireBtn"
+                    android:id="@+id/tireFixBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardBackgroundColor="#1BCABB"
@@ -251,7 +251,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/serviceVehicleBtn"
+                    android:id="@+id/vehicleServiceBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardBackgroundColor="#1BCABB"

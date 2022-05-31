@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.mecha.R;
@@ -23,16 +24,18 @@ public class SignUpCustomerActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     Button signUpCustomerButton;
     EditText et_nama,et_email,et_telepon,et_password,et_repassword;
+    ImageButton btnback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_customer);
 
+        btnback = findViewById(R.id.btnBack);
+        btnback.setOnClickListener(view -> finish());
+
         mAuth = FirebaseAuth.getInstance();
         signUpCustomerButton = findViewById(R.id.signUpCustomerButton);
-
-
 
         signUpCustomerButton.setOnClickListener(new View.OnClickListener() {
             @Override

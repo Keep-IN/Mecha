@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    tools:context=".customer.settings.SettingsFragment">
 
     <ImageView
         android:id="@+id/bg_setting"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="1">
 
         <RelativeLayout
-            android:id="@+id/rl_setting"
+            android:id="@+id/rl_changePassword"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -62,7 +62,7 @@
                 android:layout_toEndOf="@id/img_setting"
                 android:fontFamily="@font/poppins"
                 android:gravity=""
-                android:text="Settings"
+                android:text="Change Password"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 tools:ignore="HardcodedText" />
@@ -78,51 +78,6 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_notification"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rl_setting"
-            tools:ignore="TouchTargetSizeCheck">
-
-            <ImageView
-                android:id="@+id/img_notification"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/img_notification" />
-
-            <TextView
-                android:id="@+id/tv_notification"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/img_notification"
-                android:layout_alignBottom="@id/img_notification"
-                android:layout_marginStart="16dp"
-                android:layout_toStartOf="@id/img_arrow_forward2"
-                android:layout_toEndOf="@id/img_notification"
-                android:fontFamily="@font/poppins"
-                android:gravity=""
-                android:text="Notification"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText" />
-
-            <ImageView
-                android:id="@+id/img_arrow_forward2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignTop="@id/img_notification"
-                android:layout_alignBottom="@+id/img_notification"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/img_arrow_forward" />
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/rl_help"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -132,7 +87,7 @@
             android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rl_notification"
+            app:layout_constraintTop_toBottomOf="@+id/rl_changePassword"
             tools:ignore="TouchTargetSizeCheck">
 
             <ImageView
@@ -152,7 +107,7 @@
                 android:layout_toEndOf="@id/img_help"
                 android:fontFamily="@font/poppins"
                 android:gravity=""
-                android:text="Help"
+                android:text="Help Center"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 tools:ignore="HardcodedText" />
@@ -168,51 +123,6 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_feedback"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rl_help"
-            tools:ignore="TouchTargetSizeCheck">
-
-            <ImageView
-                android:id="@+id/img_feedback"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/img_feedback" />
-
-            <TextView
-                android:id="@+id/tv_feedback"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/img_feedback"
-                android:layout_alignBottom="@id/img_feedback"
-                android:layout_marginStart="16dp"
-                android:layout_toStartOf="@id/img_arrow_forward4"
-                android:layout_toEndOf="@id/img_feedback"
-                android:fontFamily="@font/poppins"
-                android:gravity=""
-                android:text="Feedback"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText" />
-
-            <ImageView
-                android:id="@+id/img_arrow_forward4"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignTop="@id/img_feedback"
-                android:layout_alignBottom="@+id/img_feedback"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/img_arrow_forward" />
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/rl_logout"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -222,7 +132,7 @@
             android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rl_feedback"
+            app:layout_constraintTop_toBottomOf="@+id/rl_help"
             tools:ignore="TouchTargetSizeCheck">
 
             <ImageView
@@ -259,11 +169,16 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageView15"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePicture"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
         android:src="@drawable/profile_setting"
+        app:civ_border_color="@color/mechaColor"
+        app:civ_border_width="1dp"
+        tools:ignore="MissingClass"
         app:layout_constraintBottom_toTopOf="@id/constraint_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -281,7 +196,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicture"
         app:layout_constraintVertical_bias=".1" />
 
     <TextView
@@ -297,18 +212,32 @@
         app:layout_constraintStart_toStartOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:backgroundTint="@color/white"
-        android:text="Edit"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView18"
-        app:layout_constraintStart_toStartOf="@+id/textView18"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_edit"
+        android:background="#00A496"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicture"
+        app:layout_constraintVertical_bias="0.611" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_edit"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="2dp"-->
+    <!--        android:backgroundTint="@color/white"-->
+    <!--        android:text="Edit"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:cornerRadius="10dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/textView18"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/textView18"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textView18" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

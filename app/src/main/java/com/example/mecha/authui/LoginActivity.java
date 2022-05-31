@@ -14,12 +14,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mecha.HomeActivity;
+import com.example.mecha.customer.CustomerMenuActivity;
 import com.example.mecha.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 
 public class LoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     EditText et_password, et_email;
@@ -112,7 +111,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
                     @Override
                     public void onSuccess(AuthResult authResult) {
 //                        checkLevel(authResult.getUser().getUid());
-                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                        startActivity(new Intent(LoginActivity.this, CustomerMenuActivity.class));
             finish();
                     }
                 });

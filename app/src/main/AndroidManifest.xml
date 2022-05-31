@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mecha">
         <activity
-            android:name=".EmergencyFixActivity"
+            android:name=".customer.home.VehicleServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.home.TireFixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.settings.ChangePasswordCustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.history.HistoryTabActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.home.EmergencyFixActivity"
             android:exported="false" />
         <activity
             android:name=".authui.ForgotPasswordActivity"
@@ -22,15 +34,10 @@
             android:name=".authui.SignUpChooseRoleActivity"
             android:exported="false" />
         <activity
-            android:name=".FixActivity"
+            android:name=".customer.home.FixActivity"
             android:exported="false" />
         <activity
-            android:name=".TabActivity"
-            android:exported="false"
-            android:label="@string/title_activity_tab"
-            android:theme="@style/Theme.Mecha.NoActionBar" />
-        <activity
-            android:name=".ProfileSettingsActivity"
+            android:name=".customer.settings.SettingEditProfileActivity"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -48,14 +55,14 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".CallMechaActivity"
+            android:name=".customer.home.CallMechaActivity"
             android:exported="false"
             android:label="@string/title_activity_call_mecha" />
         <activity
             android:name=".authui.SignUpCustomerActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".customer.CustomerMenuActivity"
             android:exported="false" />
         <activity
             android:name=".authui.LoginActivity"

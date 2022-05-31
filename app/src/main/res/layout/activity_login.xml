@@ -8,7 +8,6 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="22dp">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -124,8 +123,9 @@
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:backgroundTint="#1BCABB"
         android:text="Login"
+        android:textColor="@color/white"
+        android:background="@drawable/ic_authbtn"
         android:textStyle="bold"
         style="@style/MaterialAlertDialog.Material3"
         app:cornerRadius="10dp"
@@ -140,8 +140,8 @@
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
-        android:backgroundTint="#FFFFFF"
         android:text="Sign Up"
+        android:background="@drawable/ic_authbtn2"
         android:textColor="#1BCABB"
         android:textStyle="bold"
         app:cornerRadius="10dp"

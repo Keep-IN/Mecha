@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.mecha.R;
@@ -23,13 +24,15 @@ public class SignUpMechActivity extends AppCompatActivity {
     Button signUpMechButton;
     private FirebaseAuth mAuth;
     EditText et_nama,et_email,et_telepon,et_password,et_repassword,et_address;
-
+    ImageButton btnback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_mech);
 
+        btnback = findViewById(R.id.btnBack);
+        btnback.setOnClickListener(view -> finish());
 
         mAuth = FirebaseAuth.getInstance();
         signUpMechButton = findViewById(R.id.signUpMechButton);
