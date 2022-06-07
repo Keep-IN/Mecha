@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     EditText et_password, et_email;
     Button loginButton;
     Button signUpButton;
+    Button skipLogin;
     TextView forgotPasswordText;
     Spinner roleUserDropdown;
     private FirebaseAuth mAuth;
@@ -32,6 +33,18 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        skipLogin = findViewById(R.id.skipBtn);
+
+        skipLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(LoginActivity.this, CustomerMenuActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         mAuth = FirebaseAuth.getInstance();
         et_email = findViewById(R.id.et_email);
