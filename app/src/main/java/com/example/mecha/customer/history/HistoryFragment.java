@@ -29,7 +29,7 @@ public class HistoryFragment extends Fragment {
         viewPagerHistory = rootView.findViewById(R.id.viewPagerHistory);
 
         tabLayoutHistory.setupWithViewPager(viewPagerHistory);
-        VPHistoryAdapter vpHistoryAdapter = new VPHistoryAdapter(getParentFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        VPHistoryAdapter vpHistoryAdapter = new VPHistoryAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpHistoryAdapter.addFragment(new OrdersFragment(), "Orders");
         vpHistoryAdapter.addFragment(new PurchasesFragment(), "Purchases");
         viewPagerHistory.setAdapter(vpHistoryAdapter);

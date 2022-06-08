@@ -10,8 +10,10 @@
         android:id="@+id/imageView8"
         android:layout_width="700dp"
         android:layout_height="610dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -115,5 +117,16 @@
         app:layout_constraintTop_toTopOf="@+id/imageView8"
         app:layout_constraintVertical_bias="0.666"
         app:srcCompat="@drawable/ic_backfab" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.327" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
