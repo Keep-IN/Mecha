@@ -42,11 +42,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
-        android:layout_below="@id/upperBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingVertical="20dp"
-        android:paddingHorizontal="20dp">
+        android:layout_below="@id/upperBar"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/logomogokdijalan"
+                            android:src="@drawable/logomogok"
                             app:layout_column="0"
                             app:layout_gravity="center"
                             app:layout_row="0" />
@@ -140,7 +140,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/logomogokdijalan"
+                            android:src="@drawable/logomogok"
                             app:layout_column="0"
                             app:layout_gravity="center"
                             app:layout_row="0" />
@@ -205,7 +205,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/logomogokdijalan"
+                            android:src="@drawable/logomogok"
                             app:layout_column="0"
                             app:layout_gravity="center"
                             app:layout_row="0" />
