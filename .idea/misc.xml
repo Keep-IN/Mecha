@@ -7,7 +7,7 @@
         <entry key="..\:/Programs/Mecha/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.351" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/drawable/ic_splash_screen.xml" value="0.3155" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout-hdpi/activity_login.xml" value="0.33" />
-        <entry key="..\:/Programs/Mecha/app/src/main/res/layout-hdpi/activity_sign_up_choose_role.xml" value="0.33" />
+        <entry key="..\:/Programs/Mecha/app/src/main/res/layout-hdpi/activity_sign_up_choose_role.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout-hdpi/fragment_shop.xml" value="0.2" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout-mdpi/fragment_shop.xml" value="0.75" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout-normal/fragment_shop.xml" value="0.38697916666666665" />
@@ -29,7 +29,6 @@
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/activity_profile_settings.xml" value="0.25" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/activity_setting_edit_profile.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/activity_sign_up_choose_role.xml" value="0.38697916666666665" />
-        <entry key="..\:/Programs/Mecha/app/src/main/res/layout/activity_sign_up_customer.xml" value="0.1552444630171333" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/activity_sign_up_mech.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/activity_singup.xml" value="0.33" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
@@ -40,23 +39,28 @@
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/custom_input.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_history.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_history2.xml" value="0.3729166666666667" />
-        <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_order.xml" value="0.38697916666666665" />
-        <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_orders.xml" value="0.33" />
+        <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_orders.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_purchase.xml" value="0.38697916666666665" />
-        <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_purchases.xml" value="0.33" />
+        <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_purchases.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_settings.xml" value="0.22" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_shop.xml" value="0.25" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_tab.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/fragment_tabbed.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/layout/layout_error_dialog.xml" value="0.38697916666666665" />
         <entry key="..\:/Programs/Mecha/app/src/main/res/menu/bottom_navigation.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout-xhdpi/activity_sign_up_choose_role.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout-xxxhdpi/activity_login.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_customer_menu.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_forgot_password.xml" value="0.1597222222222222" />
-        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_login.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_login.xml" value="0.5" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_choose_role.xml" value="0.1" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_customer.xml" value="0.22" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_mech.xml" value="0.1597222222222222" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/fragment_history.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.14749893116716545" />
       </map>
     </option>
   </component>

@@ -16,9 +16,13 @@ import android.widget.Toast;
 
 import com.example.mecha.customer.CustomerMenuActivity;
 import com.example.mecha.R;
+import com.example.mecha.customer.home.HomeFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     EditText et_password, et_email;
@@ -28,6 +32,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     TextView forgotPasswordText;
     Spinner roleUserDropdown;
     private FirebaseAuth mAuth;
+    private FirebaseFirestore mstore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         });
 
         mAuth = FirebaseAuth.getInstance();
+        mstore = FirebaseFirestore.getInstance();
         et_email = findViewById(R.id.et_email);
         et_password = findViewById(R.id.et_password);
         roleUserDropdown = (Spinner) findViewById(R.id.roleUserDropdown);
@@ -62,6 +68,25 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         myAdapterRoleUser.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         roleUserDropdown.setAdapter(myAdapterRoleUser);
         roleUserDropdown.setOnItemSelectedListener(this);
+
+        if (mAuth.getCurrentUser() != null) {
+            DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    if(documentSnapshot.getString("isMech")!=null){
+                        startActivity(new Intent(LoginActivity.this, CustomerMenuActivity.class));
+                        Toast.makeText(LoginActivity.this, "Masuk Sebagai Mekanik", Toast.LENGTH_LONG).show();
+                        finish();
+                    }
+                    if(documentSnapshot.getString("isCustomer")!=null){
+                        startActivity(new Intent(LoginActivity.this, CustomerMenuActivity.class));
+                        finish();
+                    }
+                }
+            });
+
+        }
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

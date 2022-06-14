@@ -18,9 +18,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignUpCustomerActivity extends AppCompatActivity {
 
+    FirebaseFirestore mstore;
     private FirebaseAuth mAuth;
     Button signUpCustomerButton;
     EditText et_nama,et_email,et_telepon,et_password,et_repassword;
@@ -35,6 +41,7 @@ public class SignUpCustomerActivity extends AppCompatActivity {
         btnback.setOnClickListener(view -> finish());
 
         mAuth = FirebaseAuth.getInstance();
+        mstore = FirebaseFirestore.getInstance();
         signUpCustomerButton = findViewById(R.id.signUpCustomerButton);
 
         signUpCustomerButton.setOnClickListener(new View.OnClickListener() {
@@ -86,21 +93,42 @@ public class SignUpCustomerActivity extends AppCompatActivity {
                     et_telepon.setError("Telephone tidak valid !");
                 }
 
-                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(SignUpCustomerActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(SignUpCustomerActivity.this, "Berhasil", Toast.LENGTH_LONG).show();
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(SignUpCustomerActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    FirebaseUser uuser = mAuth.getCurrentUser();
+//                            User user = new User(username, email, password, repassword);
+                                    DocumentReference df = mstore.collection("Users").document((uuser.getUid()));
+                                    Map<String,Object> userInfo = new HashMap<>();
+                                    userInfo.put("Nama",nama);
+                                    userInfo.put("Email",email);
+                                    userInfo.put("Telepon",telepon);
+                                    userInfo.put("Password",password);
+                                    userInfo.put("Repassword",repassword);
+                                    //level
+                                    userInfo.put("isCustomer","1");
+                                    //
+                                    df.set(userInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
 
-                            showLogin();
+                                        //                     GANTI FIRESTORE       FirebaseDatabase.getInstance().getReference("users")
+//                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+//                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            Toast.makeText(SignUpCustomerActivity.this, "Berhasil", Toast.LENGTH_LONG).show();
 
-                        }else {
-                            Toast.makeText(SignUpCustomerActivity.this, "Gagal daftar !",
-                                    Toast.LENGTH_LONG).show();}
+                                            showLogin();
+                                        }
+                                    });
+                                } else {
+                                    Toast.makeText(SignUpCustomerActivity.this, "Gagal daftar !",
+                                            Toast.LENGTH_LONG).show();
 
-                    }
-                });
+                                }
+                            }
+                        });
             }
         });
     }
