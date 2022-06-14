@@ -56,11 +56,13 @@
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_forgot_password.xml" value="0.1597222222222222" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_login.xml" value="0.5" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_setting_edit_profile.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_choose_role.xml" value="0.1" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_customer.xml" value="0.22" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_mech.xml" value="0.1597222222222222" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/fragment_history.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/fragment_settings.xml" value="0.22" />
       </map>
     </option>
   </component>
