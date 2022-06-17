@@ -1,6 +1,7 @@
 package com.example.mecha.authui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ public class SignUpChooseRoleActivity extends AppCompatActivity {
     ImageButton mechRoleButton;
     ImageButton mechCustomerButton;
     ImageButton btnback;
+    CardView roleMech;
+    CardView roleCust;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,25 +26,47 @@ public class SignUpChooseRoleActivity extends AppCompatActivity {
         btnback = findViewById(R.id.btnBack);
         btnback.setOnClickListener(view -> finish());
 
-        mechRoleButton = findViewById(R.id.mechRoleButton);
-        mechCustomerButton = findViewById(R.id.mechCustomerButton);
+        roleMech = findViewById(R.id.mechRole);
+        roleCust = findViewById(R.id.custRole);
 
-        mechRoleButton.setOnClickListener(new View.OnClickListener() {
+        roleMech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SignUpChooseRoleActivity.this, SignUpMechActivity.class);
                 startActivity(intent);
-//                finish();
+                finish();
             }
         });
 
-        mechCustomerButton.setOnClickListener(new View.OnClickListener() {
+        roleCust.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpChooseRoleActivity.this, SignUpCustomerActivity.class);
+                Intent intent = new Intent(SignUpChooseRoleActivity.this, SignUpMechActivity.class);
                 startActivity(intent);
-//                finish();
+                finish();
             }
         });
+
+
+//        mechRoleButton = findViewById(R.id.mechRoleButton);
+//        mechCustomerButton = findViewById(R.id.mechCustomerButton);
+
+//        mechRoleButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(SignUpChooseRoleActivity.this, SignUpMechActivity.class);
+//                startActivity(intent);
+////                finish();
+//            }
+//        });
+//
+//        mechCustomerButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(SignUpChooseRoleActivity.this, SignUpCustomerActivity.class);
+//                startActivity(intent);
+////                finish();
+//            }
+//        });
     }
 }

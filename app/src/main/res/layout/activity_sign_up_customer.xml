@@ -23,8 +23,8 @@
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="260dp"
-        android:layout_height="201dp"
+        android:layout_width="239dp"
+        android:layout_height="171dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
@@ -120,18 +120,19 @@
 
     <Button
         android:id="@+id/signUpCustomerButton"
+        style="@style/MaterialAlertDialog.Material3"
         android:layout_width="match_parent"
         android:layout_height="57dp"
-        android:text="Sign Up"
         android:background="@drawable/ic_authbtn"
-        android:textStyle="bold"
+        android:text="Sign Up"
         android:textColor="@color/white"
-        style="@style/MaterialAlertDialog.Material3"
+        android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.295" />
+        app:layout_constraintVertical_bias="0.138" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
