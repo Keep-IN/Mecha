@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,11 +28,19 @@ import com.example.mecha.R;
 import com.example.mecha.authui.SignUpCustomerActivity;
 import com.example.mecha.customer.CustomerMenuActivity;
 import com.example.mecha.customer.home.EmergencyFixActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -44,12 +53,14 @@ public class SettingsFragment extends Fragment {
     private FirebaseUser user;
     private StorageReference storageReference;
 
+    TextView tv_username,tv_email;
     ImageView profilePicture;
     ImageButton btnEdit;
     RelativeLayout btn_changePassword;
     RelativeLayout btn_helpCenter;
     RelativeLayout btn_logout;
     View view;
+    String userid;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +76,7 @@ public class SettingsFragment extends Fragment {
 
 
         mAuth = FirebaseAuth.getInstance();
+
         mstore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
 
@@ -78,7 +90,20 @@ public class SettingsFragment extends Fragment {
             });
         }
 
+        tv_username = view.findViewById(R.id.tv_username);
+        tv_email = view.findViewById(R.id.tv_email);
+        if (mAuth.getCurrentUser() != null) {
+            userid= mAuth.getCurrentUser().getUid();
+            DocumentReference documentReference = mstore.collection("Users").document(userid);
+            documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                    tv_username.setText(documentSnapshot.getString("Nama"));
+                    tv_email.setText(documentSnapshot.getString("Email"));
 
+                }
+            });
+        }
 
 
 

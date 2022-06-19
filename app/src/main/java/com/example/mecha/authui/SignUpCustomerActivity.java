@@ -112,9 +112,6 @@ public class SignUpCustomerActivity extends AppCompatActivity {
                                     //
                                     df.set(userInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
 
-                                        //                     GANTI FIRESTORE       FirebaseDatabase.getInstance().getReference("users")
-//                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             Toast.makeText(SignUpCustomerActivity.this, "Berhasil", Toast.LENGTH_LONG).show();

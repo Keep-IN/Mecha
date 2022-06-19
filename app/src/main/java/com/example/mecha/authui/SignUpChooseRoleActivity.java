@@ -41,7 +41,7 @@ public class SignUpChooseRoleActivity extends AppCompatActivity {
         roleCust.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpChooseRoleActivity.this, SignUpMechActivity.class);
+                Intent intent = new Intent(SignUpChooseRoleActivity.this, SignUpCustomerActivity.class);
                 startActivity(intent);
                 finish();
             }
