@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -11,14 +12,17 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.mecha.MapsActivity;
 import com.example.mecha.R;
 
 public class EmergencyFixActivity extends AppCompatActivity {
 
     ImageButton btnback;
     CardView mogokBtn;
+    Button btn_order;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,8 @@ public class EmergencyFixActivity extends AppCompatActivity {
 
         btnback = findViewById(R.id.btnBack);
         btnback.setOnClickListener(view -> finish());
+
+        btn_order = findViewById(R.id.btn_ordersss);
 
         mogokBtn = findViewById(R.id.mogokBtn);
         mogokBtn.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +43,7 @@ public class EmergencyFixActivity extends AppCompatActivity {
 
             private void showDialog() {
 
+
                 final Dialog dialog = new Dialog(EmergencyFixActivity.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.bottomsheetlayout);
@@ -46,6 +53,11 @@ public class EmergencyFixActivity extends AppCompatActivity {
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                 dialog.getWindow().setGravity(Gravity.BOTTOM);
+
+
+
+
+
 
             }
         });

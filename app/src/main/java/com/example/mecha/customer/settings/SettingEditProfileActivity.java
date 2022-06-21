@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.mecha.R;
 import com.example.mecha.authui.LoginActivity;
 import com.example.mecha.authui.SignUpCustomerActivity;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -38,6 +39,7 @@ public class SettingEditProfileActivity extends AppCompatActivity {
     FirebaseFirestore mstore;
     TextView yahaha;
     private FirebaseAuth mAuth;
+    private GoogleMap gMap;
     String userid,Password,Repassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +86,7 @@ public class SettingEditProfileActivity extends AppCompatActivity {
                     String phone = edt_phone.getText().toString();
 
                     userid= mAuth.getCurrentUser().getUid();
-                    DocumentReference documentReference = mstore.collection("Users").document(userid);
+//                    DocumentReference documentReference = mstore.collection("Users").document(userid);
 //                    documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
 //                        @Override
 //                        public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
@@ -97,6 +99,7 @@ public class SettingEditProfileActivity extends AppCompatActivity {
                     Map<String, Object> userInfo = new HashMap<>();
 
 
+
 //                    userInfo.put("Password",yahaha);
                     userInfo.put("Nama",nama);
                     userInfo.put("Email",email);
@@ -104,6 +107,7 @@ public class SettingEditProfileActivity extends AppCompatActivity {
 
                     //level
                     userInfo.put("isCustomer","1");
+
                     df.set(userInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
