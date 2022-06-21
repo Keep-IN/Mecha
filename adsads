@@ -1,0 +1,265 @@
+[33mcommit 7236fa64f015f48f90dffb1ea8bc1f1e69012929[m[33m ([m[1;36mHEAD -> [m[1;32mnewmassive[m[33m, [m[1;31morigin/newmassive[m[33m)[m
+Author: dzhamiedah <sugibros31@gmail.com>
+Date:   Tue Jun 21 12:48:57 2022 +0700
+
+    Error git
+
+[33mcommit 3751045d3deedb601756491ef6d4cfad449a40b7[m
+Author: dzhamiedah <sugibros31@gmail.com>
+Date:   Tue Jun 21 12:42:01 2022 +0700
+
+    test errorgit
+
+[33mcommit 276fca6b34153da17ca96272e89862bc9b0ffdfd[m
+Author: dzhamiedah <sugibros31@gmail.com>
+Date:   Tue Jun 21 12:27:03 2022 +0700
+
+    add Maps activity
+
+[33mcommit 9897e4239d8164c9748bb99e482d0cd1af63eabb[m
+Author: dzhamiedah <sugibros31@gmail.com>
+Date:   Sun Jun 19 23:03:04 2022 +0700
+
+    fix CRUD profile
+
+[33mcommit 1e6a7e731bd1532e67e63fa3d167cdd3b7d126e2[m
+Author: dzhamiedah <sugibros31@gmail.com>
+Date:   Sat Jun 18 04:58:43 2022 +0700
+
+    fix bug setting
+
+[33mcommit 529961ba592ab9a82c5c704489df68172e808389[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Fri Jun 17 21:31:53 2022 +0700
+
+    added overlay
+
+[33mcommit 9b6910d3cb9cb5716bc915f4f1489d20fa415b71[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Fri Jun 17 21:11:23 2022 +0700
+
+    added overlay
+
+[33mcommit f08cb2ab9596e607eff2633a656c14f04577c3f4[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Fri Jun 17 18:07:15 2022 +0700
+
+    Choose Role fixed
+
+[33mcommit 4e2c1cbdf5da42af0dfbf9e383c8f1bfe64f4fda[m
+Author: FahmiFauzi26 <fahmifauziabdullah26@gmail.com>
+Date:   Wed Jun 15 06:12:44 2022 +0700
+
+    upload profilePicture
+
+[33mcommit b59d4d098c3990f7005db2d8cb689c3832a560c4[m
+Author: FahmiFauzi26 <fahmifauziabdullah26@gmail.com>
+Date:   Tue Jun 14 20:03:34 2022 +0700
+
+    auth + userRole + checkLevel
+
+[33mcommit abb340a534c02cb223981100630791416ce983fe[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Thu Jun 9 01:05:33 2022 +0700
+
+    Logo mogok fixed
+
+[33mcommit 382af455bc56a99fb7b932f9469c08c6a5120929[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Thu Jun 9 00:28:27 2022 +0700
+
+    Added history Screen
+
+[33mcommit a63fff8a21cda8fd250312f350b2c35f07c40901[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Wed Jun 8 10:26:39 2022 +0700
+
+    history fragment fix
+
+[33mcommit 1fb695b6520193cac5ca4275d62751bd51c3cc70[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Tue Jun 7 21:29:19 2022 +0700
+
+    fixes some screen
+
+[33mcommit b14a7a52c81531c7218b36ddd2a85ad398297d89[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Tue Jun 7 20:34:28 2022 +0700
+
+    shop screen fix
+
+[33mcommit 1f93aef4ff40df66db94eb466acf33cd000f2e7e[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Tue Jun 7 19:49:37 2022 +0700
+
+    splash screen fix
+
+[33mcommit a146478a5105a3a04d116778595cced11c993ab5[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: innocenty-lab <74968146+innocenty-lab@users.noreply.github.com>
+Date:   Wed Jun 1 04:28:08 2022 +0700
+
+    slicing
+
+[33mcommit f5efa814a96212e4567c74cc6c9ae1bc0179680d[m
+Merge: 8c93fe3 e1470e6
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Sun May 29 23:53:54 2022 +0700
+
+    Merge pull request #14 from Keep-IN/newmassive
+    
+    Merge pull request #13 from Keep-IN/master
+
+[33mcommit e1470e66ba059b5478f3298d04dc16c80d28412d[m
+Merge: 7d86fba 8c93fe3
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Sun May 29 23:53:18 2022 +0700
+
+    Merge pull request #13 from Keep-IN/master
+    
+    merge
+
+[33mcommit 8c93fe3fb61a2b27335a6ca31073905c7989d66c[m
+Merge: e0701c2 7d86fba
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Sun May 29 23:52:36 2022 +0700
+
+    Merge pull request #12 from Keep-IN/newmassive
+    
+    uncomment
+
+[33mcommit 7d86fba56667ff3c417be993aae09459d2fc5321[m
+Author: innocenty-lab <74968146+innocenty-lab@users.noreply.github.com>
+Date:   Sun May 29 23:51:41 2022 +0700
+
+    uncomment
+
+[33mcommit e0701c230d568cc137c445ddab058283f5f16d79[m
+Merge: 27801da 6b5c0e6
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Sun May 29 23:44:46 2022 +0700
+
+    Merge pull request #11 from Keep-IN/newmassive
+    
+    Merge pull request #10 from Keep-IN/master
+
+[33mcommit 6b5c0e69c55fd26a2fab0cc82423dd216994e07d[m
+Merge: 574739a 27801da
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Sun May 29 23:44:00 2022 +0700
+
+    Merge pull request #10 from Keep-IN/master
+    
+    Merge
+
+[33mcommit 27801dafde02b6202f39f42224b4ee69a501af0c[m
+Merge: cccad17 574739a
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Sun May 29 23:41:04 2022 +0700
+
+    Merge pull request #9 from Keep-IN/newmassive
+    
+    Newmassive
+
+[33mcommit 574739a200278cda1a339c5ee40b25be126bfc7f[m
+Author: innocenty-lab <74968146+innocenty-lab@users.noreply.github.com>
+Date:   Sun May 29 23:40:16 2022 +0700
+
+    emergency fix
+
+[33mcommit 40165baac184e6f6ff239810c2f6148696926872[m
+Author: innocenty-lab <74968146+innocenty-lab@users.noreply.github.com>
+Date:   Wed May 25 04:24:32 2022 +0700
+
+    revisi home
+
+[33mcommit cccad1716a01dd3d334ef18916417b8c4e19c54d[m
+Merge: e9af1b3 1966d48
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Tue May 24 19:38:56 2022 +0700
+
+    Merge pull request #8 from Keep-IN/newmassive
+    
+    revisi signup  choose role
+
+[33mcommit 1966d48b472668c7756c837cc1a538cf31969531[m
+Author: innocenty-lab <74968146+innocenty-lab@users.noreply.github.com>
+Date:   Tue May 24 19:37:56 2022 +0700
+
+    revisi signup  choose role
+
+[33mcommit e9af1b385cb06b2691e381b2e9eaabadf7b85cfb[m[33m ([m[1;32mtest[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 6d2c516 c6e76e7
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Tue May 17 10:04:43 2022 +0700
+
+    Merge pull request #7 from Keep-IN/massive
+    
+    Merge pull request #6 from Keep-IN/master
+
+[33mcommit c6e76e725d97e1ac512c86e62c5d995f77a44de0[m
+Merge: 232e266 6d2c516
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Tue May 17 10:03:59 2022 +0700
+
+    Merge pull request #6 from Keep-IN/master
+    
+    merge
+
+[33mcommit 6d2c51682a6973b457726424bd3382420636ab1b[m
+Merge: 88e127b 232e266
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Tue May 17 10:03:16 2022 +0700
+
+    Merge pull request #5 from Keep-IN/massive
+    
+    Massive
+
+[33mcommit 232e266b4b78870b4d5a7fc6eb47066de03b5737[m
+Merge: c64a1a3 f1658a8
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Tue May 17 09:59:57 2022 +0700
+
+    Merge remote-tracking branch 'origin/massive' into massive
+    
+    # Conflicts:
+    #       .idea/misc.xml
+    #       app/src/main/ic_launcher-playstore.png
+    #       app/src/main/res/mipmap-hdpi/ic_launcher.png
+    #       app/src/main/res/mipmap-hdpi/ic_launcher_round.png
+    #       app/src/main/res/mipmap-mdpi/ic_launcher.png
+    #       app/src/main/res/mipmap-mdpi/ic_launcher_round.png
+    #       app/src/main/res/mipmap-xhdpi/ic_launcher.png
+    #       app/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+    #       app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+    #       app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+    #       app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+    #       app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+    #       app/src/main/res/values/ic_launcher_background.xml
+
+[33mcommit 88e127beac5029c8e16e4b1d0b057414951e218e[m
+Merge: b7d4872 f1658a8
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Tue May 17 09:31:51 2022 +0700
+
+    Merge pull request #4 from Keep-IN/massive
+    
+    Merge pull request #3 from Keep-IN/master
+
+[33mcommit f1658a8760b144b80628e7eb9c08f1d59a358d22[m
+Merge: 4bcc94b b7d4872
+Author: Putra Bahriantara Ramadhan <putraramadhan532@gmail.com>
+Date:   Tue May 17 09:31:20 2022 +0700
+
+    Merge pull request #3 from Keep-IN/master
+    
+    Merge pull request #2 from Keep-IN/massive
+
+[33mcommit c64a1a3ffd4cc832281b05339c975219983c90f4[m
+Author: Kevin <kevinraihanr45@gmail.com>
+Date:   Tue May 17 09:27:11 2022 +0700
+
+    Added app icon
+
+[33mcommit b7d48726c596b01ed45c87bb06327a74747ad9b3[m
+Merge: 0350df8 4bcc94b
+Author: Putra Bahriantara Ramadha
