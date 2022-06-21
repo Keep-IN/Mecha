@@ -8,6 +8,7 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_history">HistoryActivity</string>
     <string name="title_activity_tab">TabActivity</string>
+    <string name="api">AIzaSyCcSlHXfzqR3NZSirC4wMDuZ8t470oNp4E</string>
 
     <string-array name="roleUser">
         <item>Customer</item>
