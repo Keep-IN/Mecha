@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,7 +16,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.mecha.MapsActivity;
 import com.example.mecha.R;
+import com.example.mecha.authui.LoginActivity;
+import com.example.mecha.customer.CustomerMenuActivity;
 
 public class EmergencyFixActivity extends AppCompatActivity {
 
@@ -52,7 +56,8 @@ public class EmergencyFixActivity extends AppCompatActivity {
                 btnOrder.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(EmergencyFixActivity.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EmergencyFixActivity.this, MapsActivity.class);
+                        startActivity(intent);
                     }
                 });
 
