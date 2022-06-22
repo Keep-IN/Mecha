@@ -11,7 +11,7 @@
         android:id="@+id/layoutmap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:padding="0dp">
 
         <fragment
             android:id="@+id/map"
@@ -49,6 +49,18 @@
         android:padding="15dp"
         android:text="Alamat"
         android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alamatMap"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_bgbuttonmap"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Call Mecha"
+        android:textColor="#1BCABB" />
 
 
 </RelativeLayout>
