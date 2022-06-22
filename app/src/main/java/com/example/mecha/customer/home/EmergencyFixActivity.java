@@ -2,9 +2,9 @@ package com.example.mecha.customer.home;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
-import com.example.mecha.MapsActivity;
 import com.example.mecha.R;
 
 public class EmergencyFixActivity extends AppCompatActivity {
@@ -32,7 +32,7 @@ public class EmergencyFixActivity extends AppCompatActivity {
         btnback = findViewById(R.id.btnBack);
         btnback.setOnClickListener(view -> finish());
 
-        btn_order = findViewById(R.id.btn_ordersss);
+        btn_order = findViewById(R.id.btn_order);
 
         mogokBtn = findViewById(R.id.mogokBtn);
         mogokBtn.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +47,15 @@ public class EmergencyFixActivity extends AppCompatActivity {
                 final Dialog dialog = new Dialog(EmergencyFixActivity.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.bottomsheetlayout);
+
+                Button btnOrder = dialog.findViewById(R.id.btn_order);
+
+                btnOrder.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(EmergencyFixActivity.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
                 dialog.show();
                 dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);

@@ -7,7 +7,7 @@
     android:background="@drawable/dialog_bg">
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tittleMogok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_semibold"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.064" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/subTitlemogok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
@@ -31,11 +31,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/tittleMogok"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/viewDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -47,11 +47,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/subTitlemogok"
         app:layout_constraintVertical_bias="0.028" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/estmPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -63,11 +63,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/detailNum2"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/priceRange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
@@ -76,11 +76,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/estmPrice"
         app:layout_constraintVertical_bias="0.022" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/detailNum1"
         android:layout_width="307dp"
         android:layout_height="43dp"
         android:layout_marginTop="5dp"
@@ -89,11 +89,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/viewDetail"
         app:layout_constraintVertical_bias="0.027" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/detailNum2"
         android:layout_width="307dp"
         android:layout_height="43dp"
         android:fontFamily="@font/poppins"
@@ -101,11 +101,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/detailNum1"
         app:layout_constraintVertical_bias="0.016" />
 
     <Button
-        android:id="@+id/btn_ordersss"
+        android:id="@+id/btn_order"
         android:layout_width="244dp"
         android:layout_height="47dp"
         android:layout_marginTop="15dp"
@@ -120,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/priceRange"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
