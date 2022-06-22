@@ -2,7 +2,6 @@ package com.example.mecha.customer.home;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
 import android.graphics.Color;
@@ -32,7 +31,7 @@ public class EmergencyFixActivity extends AppCompatActivity {
         btnback = findViewById(R.id.btnBack);
         btnback.setOnClickListener(view -> finish());
 
-        btn_order = findViewById(R.id.btn_order);
+        btn_order = findViewById(R.id.btnOrder);
 
         mogokBtn = findViewById(R.id.mogokBtn);
         mogokBtn.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +47,7 @@ public class EmergencyFixActivity extends AppCompatActivity {
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.bottomsheetlayout);
 
-                Button btnOrder = dialog.findViewById(R.id.btn_order);
+                Button btnOrder = dialog.findViewById(R.id.btnOrder);
 
                 btnOrder.setOnClickListener(new View.OnClickListener() {
                     @Override
