@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -14,8 +15,11 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.mecha.customer.PaymentActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -34,6 +38,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ActivityMapsBinding binding;
     private boolean oke = false;
     TextView lat,lon,alamat;
+    Button callMechaBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +49,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         lat = findViewById(R.id.latitudemap);
         lon = findViewById(R.id.longitudemap);
         alamat = findViewById(R.id.alamatMap);
-
+        callMechaBtn = findViewById(R.id.btnCallMecha);
 
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
 
@@ -89,6 +94,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     lon.setText(String.valueOf(location.getLongitude()));
                     alamat.setText(addressLines);
                 }
+            }
+        });
+
+        callMechaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent paymentOrder = new Intent(MapsActivity.this, PaymentActivity.class);
+                startActivity(paymentOrder);
             }
         });
     }

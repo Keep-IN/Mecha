@@ -51,7 +51,7 @@
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCallMecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/alamatMap"
