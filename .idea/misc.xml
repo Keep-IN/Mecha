@@ -65,9 +65,14 @@
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/layout_error_dialog.xml" value="0.1328125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/layout_success_dialog.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/layout_warning_dialog.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/drawable/button_cancel_background.xml" value="0.135" />
         <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/activity_maps.xml" value="0.1" />
-        <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/activity_payment.xml" value="0.22" />
+        <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/activity_payment.xml" value="0.1" />
+        <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.15925925925925927" />
+        <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/fragment_settings.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/layout_success_dialog.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/layout_warning_dialog.xml" value="0.12447916666666667" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_forgot_password.xml" value="0.1597222222222222" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_login.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_main.xml" value="0.1" />
