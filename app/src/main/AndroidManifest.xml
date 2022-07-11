@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mecha">
         <activity
+            android:name=".customer.history.ReportProblemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.history.TransactionDetailCompletedOrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".customer.PaymentActivity"
             android:exported="false" />
         <!--

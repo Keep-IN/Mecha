@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mecha.R;
+import com.example.mecha.customer.history.TransactionDetailCompletedOrderActivity;
 
 import java.util.ArrayList;
 
@@ -33,7 +33,7 @@ public class RecyclerViewAdapterCompletedOrders extends RecyclerView.Adapter<Rec
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_completed, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_completed_orders, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -44,31 +44,26 @@ public class RecyclerViewAdapterCompletedOrders extends RecyclerView.Adapter<Rec
         holder.statusPerbaikanView.setText(statusPerbaikan.get(position));
         holder.waktuPerbaikanView.setText(waktuPerbaikan.get(position));
 
-//        holder.buttonLihat.setOnClickListener(new View.OnClickListener() {
+//        holder.onGoingServiceLihat.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                Toast.makeText(context, posisiLowongan.get(holder.getAdapterPosition()), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, alamatPerbaikan.get(holder.getAdapterPosition()), Toast.LENGTH_SHORT).show();
 //            }
 //        });
 
-//        holder.buttonLihat.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                Toast.makeText(context, posisiLowongan.get(holder.getAdapterPosition()), Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(context, JobDetailActivity.class);
-//
-//                intent.putExtra("posisi_lowongan", posisiLowongan.get(holder.getAdapterPosition()));
-//                intent.putExtra("nama_perusahaan", namaPerusahaan.get(holder.getAdapterPosition()));
-//                intent.putExtra("alamat_lowongan", alamatLowongan.get(holder.getAdapterPosition()));
-//                intent.putExtra("minimal_pendidikan", minimalPendidikan.get(holder.getAdapterPosition()));
-//                intent.putExtra("gaji", gaji.get(holder.getAdapterPosition()));
-//                intent.putExtra("tenggat_lowongan", tenggatLowongan.get(holder.getAdapterPosition()));
-//
-//                context.startActivities(new Intent[]{intent});
-//
-//
-//            }
-//        });
+        holder.ordersCompletedLihat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(context, posisiLowongan.get(holder.getAdapterPosition()), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, TransactionDetailCompletedOrderActivity.class);
+
+                intent.putExtra("alamat_perbaikan", alamatPerbaikan.get(holder.getAdapterPosition()));
+                intent.putExtra("waktu_perbaikan", waktuPerbaikan.get(holder.getAdapterPosition()));
+
+                context.startActivities(new Intent[]{intent});
+
+            }
+        });
     }
 
     @Override
@@ -82,6 +77,7 @@ public class RecyclerViewAdapterCompletedOrders extends RecyclerView.Adapter<Rec
         TextView alamatPerbaikanView;
         TextView statusPerbaikanView;
         TextView waktuPerbaikanView;
+        LinearLayout ordersCompletedLihat;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,6 +85,7 @@ public class RecyclerViewAdapterCompletedOrders extends RecyclerView.Adapter<Rec
             alamatPerbaikanView = itemView.findViewById(R.id.alamatPerbaikanView);
             statusPerbaikanView = itemView.findViewById(R.id.statusPerbaikanView);
             waktuPerbaikanView = itemView.findViewById(R.id.waktuPerbaikanView);
+            ordersCompletedLihat = itemView.findViewById(R.id.ordersCompletedLihat);
         }
     }
 }

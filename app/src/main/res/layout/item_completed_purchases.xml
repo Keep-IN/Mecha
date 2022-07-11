@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginVertical="5dp"
+    android:id="@+id/linearLayoutItemCompletedPurchases">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/purchasesCompletedLihat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/mechaColor"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Belanja"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/waktuPembelianView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="25 April 2022" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_line" />
+
+            </LinearLayout>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/img_kunci_perkakas"
+                    app:layout_column="0"
+                    app:layout_columnWeight="0"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    app:layout_column="1"
+                    app:layout_columnWeight="0"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1">
+
+                    <TextView
+                        android:id="@+id/namaBarangView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kunci Perkakas"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/jumlahBarangView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 Barang" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/vertical_line"
+                    app:layout_column="2"
+                    app:layout_columnWeight="0"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    app:layout_column="3"
+                    app:layout_columnWeight="0"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Belanja"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/totalBelanjaView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp875.000"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/gridLayout2">
+
+                <Button
+                    android:id="@+id/buttonLihat"
+                    style="@style/MaterialAlertDialog.Material3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_selesai_btn"
+                    android:minHeight="35dp"
+                    android:text="Selesai"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

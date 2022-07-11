@@ -7,7 +7,7 @@
     android:id="@+id/linearLayoutItemCompletedOrders">
 
     <LinearLayout
-        android:id="@+id/onGoingService"
+        android:id="@+id/ordersCompletedLihat"
         android:layout_below="@id/onGoingTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
