@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.mecha.customer.CustomerMenuActivity;
 import com.example.mecha.R;
 import com.example.mecha.customer.home.HomeFragment;
+import com.example.mecha.mecha.MechaMenuActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -45,7 +46,8 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             @Override
             public void onClick(View view) {
 //                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                Intent intent = new Intent(LoginActivity.this, CustomerMenuActivity.class);
+//                Intent intent = new Intent(LoginActivity.this, CustomerMenuActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MechaMenuActivity.class);
                 startActivity(intent);
                 finish();
             }
