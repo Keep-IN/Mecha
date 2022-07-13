@@ -27,10 +27,16 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.mecha.databinding.ActivityMapsBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -39,6 +45,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean oke = false;
     TextView lat,lon,alamat;
     Button callMechaBtn;
+    FirebaseFirestore mstore;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +58,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         lon = findViewById(R.id.longitudemap);
         alamat = findViewById(R.id.alamatMap);
         callMechaBtn = findViewById(R.id.btnCallMecha);
+        mAuth = FirebaseAuth.getInstance();
+        mstore = FirebaseFirestore.getInstance();
 
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
 
@@ -85,6 +95,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     e.printStackTrace();
                 }
                 if (oke) {
+
                     String addressLines = addressList.get(0).getAddressLine(0);
                     LatLng lokasisekarang = new LatLng(location.getLatitude(),location.getLongitude());
                     mMap.addMarker(new MarkerOptions().position(lokasisekarang).title("Lokasi Sekarang"));
@@ -93,17 +104,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     lat.setText(String.valueOf(location.getLatitude()));
                     lon.setText(String.valueOf(location.getLongitude()));
                     alamat.setText(addressLines);
+
+                    callMechaBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            DocumentReference df = mstore.collection("Order").document((user.getUid()));
+                            Map<String,Object> userInfo = new HashMap<>();
+                            userInfo.put("Jenis Orderan","Mogok");
+                            userInfo.put("Alamat",addressLines);
+                            df.set(userInfo);
+
+                            Intent paymentOrder = new Intent(MapsActivity.this, PaymentActivity.class);
+                            startActivity(paymentOrder);
+                        }
+                    });
+
                 }
             }
         });
 
-        callMechaBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent paymentOrder = new Intent(MapsActivity.this, PaymentActivity.class);
-                startActivity(paymentOrder);
-            }
-        });
+
     }
 
     /**

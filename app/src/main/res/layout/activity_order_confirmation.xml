@@ -156,10 +156,11 @@
                 app:layout_rowWeight="1">
 
                 <TextView
+                    android:id="@+id/namaJalan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Jl. Pamungkas Km.14,5 Lodadi Ngemplak, Lodadi, Umbulmartani, Kec. Ngemplak, Kabupaten Sleman, Daerah Istimewa Yogyakarta"
+                    android:text="Alamat"
                     android:textColor="@color/black"
                     android:textSize="10sp" />
 
@@ -203,6 +204,7 @@
                 app:layout_rowWeight="1">
 
                 <TextView
+                    android:id="@+id/getLongtitude"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
@@ -216,13 +218,13 @@
 
         <EditText
             android:id="@+id/catatanInput"
-            android:layout_below="@id/kordinatPemesananDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/kordinatPemesananDetail"
             android:background="@drawable/ic_rectangle_180"
             android:hint="Tambah catatan alamat"
-            android:paddingLeft="16dp"
-            android:inputType="text" />
+            android:inputType="text"
+            android:paddingLeft="16dp" />
 
         <TextView
             android:id="@+id/voucherTitle"
@@ -396,12 +398,12 @@
             android:layout_below="@id/totalLayout">
 
             <Button
-                android:id="@+id/btnReportProblem"
+                android:id="@+id/btn_order"
                 style="@style/MaterialAlertDialog.Material3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_confirmbtn"
-                android:text="Report a Problem"
+                android:text="Order Now"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
