@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mecha">
         <activity
+            android:name=".customer.shop.OrderConfirmationActivity"
+            android:exported="false" />
+        <activity
             android:name=".mecha.MechaMenuActivity"
             android:exported="false" />
         <activity

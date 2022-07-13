@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.mecha.R;
 import com.example.mecha.customer.home.EmergencyFixActivity;
+import com.example.mecha.customer.shop.OrderConfirmationActivity;
 
 import worker8.com.github.radiogroupplus.RadioGroupPlus;
 
@@ -47,7 +48,7 @@ public class PaymentActivity extends AppCompatActivity implements RadioGroupPlus
             @Override
             public void onClick(View view) {
                 if (validate()) {
-                    Intent backHome = new Intent(PaymentActivity.this, CustomerMenuActivity.class);
+                    Intent backHome = new Intent(PaymentActivity.this, OrderConfirmationActivity.class);
                     startActivity(backHome);
                 }
             }
