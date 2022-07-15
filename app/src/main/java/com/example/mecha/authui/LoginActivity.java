@@ -46,8 +46,8 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             @Override
             public void onClick(View view) {
 //                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-//                Intent intent = new Intent(LoginActivity.this, CustomerMenuActivity.class);
-                Intent intent = new Intent(LoginActivity.this, MechaMenuActivity.class);
+                Intent intent = new Intent(LoginActivity.this, CustomerMenuActivity.class);
+//                Intent intent = new Intent(LoginActivity.this, MechaMenuActivity.class);
                 startActivity(intent);
                 finish();
             }

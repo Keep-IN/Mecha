@@ -44,6 +44,7 @@
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/drawable/selector.xml" value="0.1" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout-hdpi/fragment_shop.xml" value="0.12421875" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_change_password_customer.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_change_password_mecha.xml" value="0.1546875" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_emergency_fix.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_fix.xml" value="0.1" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_history_tab.xml" value="0.1328125" />
@@ -52,6 +53,8 @@
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_main2.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_profile_settings.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_setting_edit_mecha_profile.xml" value="0.16875" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_setting_edit_profile.xml" value="0.16875" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_sign_up_choose_role.xml" value="0.1" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_sign_up_customer.xml" value="0.125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_sign_up_mech.xml" value="0.1" />
@@ -60,7 +63,11 @@
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_vehicle_service.xml" value="0.125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_history.xml" value="0.1328125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_mecha_history.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_mecha_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_mecha_orders.xml" value="0.12" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_mecha_purchases.xml" value="0.1" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_mecha_settings.xml" value="0.22" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_order.xml" value="0.1328125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_orders.xml" value="0.1328125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_purchases.xml" value="0.1328125" />

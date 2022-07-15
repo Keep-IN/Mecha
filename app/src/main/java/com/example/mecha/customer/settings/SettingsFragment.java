@@ -204,7 +204,7 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 alertDialog.dismiss();
-                Toast.makeText(getActivity(), "Confirm", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Logging Out", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -212,7 +212,7 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 alertDialog.dismiss();
-                Toast.makeText(getActivity(), "Logging Out", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "Canceling", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -1,66 +1,101 @@
 package com.example.mecha.mecha.mechaSettings;
 
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mecha.R;
+import com.example.mecha.customer.settings.ChangePasswordCustomerActivity;
+import com.example.mecha.customer.settings.SettingEditProfileActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MechaSettingsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MechaSettingsFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public MechaSettingsFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MechaSettingsFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MechaSettingsFragment newInstance(String param1, String param2) {
-        MechaSettingsFragment fragment = new MechaSettingsFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    ImageButton btnEdit;
+    RelativeLayout btn_changePassword;
+    RelativeLayout btn_helpCenter;
+    RelativeLayout btn_logout;
+    View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mecha_settings, container, false);
+        view =  inflater.inflate(R.layout.fragment_mecha_settings, container, false);
+
+        btnEdit = view.findViewById(R.id.btn_edit);
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent moveProfileStg = new Intent(getActivity(), SettingEditMechaProfileActivity.class);
+                startActivity(moveProfileStg);
+            }
+        });
+
+        btn_logout = view.findViewById(R.id.rl_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showLogOutAlertDialog();
+            }
+        });
+
+        btn_changePassword = view.findViewById(R.id.rl_changePassword);
+        btn_changePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ChangePasswordMechaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
+    }
+
+    private void showLogOutAlertDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogTheme);
+        view = LayoutInflater.from(getActivity()).inflate(
+                R.layout.layout_warning_dialog,(ConstraintLayout)view.findViewById(R.id.layoutDialogContainer)
+        );
+        builder.setView(view);
+        ((TextView) view.findViewById(R.id.textTitle)).setText("Warning");
+        ((TextView) view.findViewById(R.id.textMessage)).setText("Are you sure to log out?");
+        ((Button) view.findViewById(R.id.buttonYes)).setText("Confirm");
+        ((Button) view.findViewById(R.id.buttonCancel)).setText("Cancel");
+
+        final AlertDialog alertDialog = builder.create();
+
+        view.findViewById(R.id.buttonYes).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+                Toast.makeText(getActivity(), "Logging Out", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        view.findViewById(R.id.buttonCancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+//                Toast.makeText(getActivity(), "Canceling", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        if (alertDialog.getWindow() != null) {
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+        }
+        alertDialog.show();
     }
 }
