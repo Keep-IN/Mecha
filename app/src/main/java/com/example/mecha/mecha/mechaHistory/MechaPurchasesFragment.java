@@ -1,66 +1,72 @@
 package com.example.mecha.mecha.mechaHistory;
 
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.mecha.R;
+import com.example.mecha.model.RecyclerViewAdapterCompletedPurchases;
+import com.example.mecha.model.RecyclerViewAdapterPurchased;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MechaPurchasesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
 public class MechaPurchasesFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    View view;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public MechaPurchasesFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MechaPurchasesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MechaPurchasesFragment newInstance(String param1, String param2) {
-        MechaPurchasesFragment fragment = new MechaPurchasesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    private ArrayList<Image> profilePicture = new ArrayList<>();
+    private ArrayList<String> namaCustomer = new ArrayList<>();
+    private ArrayList<String> itemPurchased = new ArrayList<>();
+    private ArrayList<String> jumlahBarang = new ArrayList<>();
+    private ArrayList<String> harga = new ArrayList<>();
+    private ArrayList<String> totalHarga = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mecha_purchases, container, false);
+        view =  inflater.inflate(R.layout.fragment_mecha_purchases, container, false);
+
+        getDataPurchased();
+
+        return view;
+    }
+
+    private void prosesRecyclerViewAdapter() {
+        RecyclerView recyclerView = view.findViewById(R.id.recycleViewPurchased);
+        RecyclerViewAdapterPurchased adapter = new RecyclerViewAdapterPurchased(namaCustomer, itemPurchased, jumlahBarang, harga, totalHarga, getContext());
+
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+    }
+
+    private void getDataPurchased() {
+        namaCustomer.add("CameronWilliamson");
+        itemPurchased.add("Mesin Motor");
+        jumlahBarang.add("1 Barang");
+        harga.add("Rp700.000");
+        totalHarga.add("Rp720.000");
+
+        namaCustomer.add("EstherHoward");
+        itemPurchased.add("Mesin Motor");
+        jumlahBarang.add("1 Barang");
+        harga.add("Rp700.000");
+        totalHarga.add("Rp720.000");
+
+        namaCustomer.add("BrooklynSimmons");
+        itemPurchased.add("Mesin Motor");
+        jumlahBarang.add("1 Barang");
+        harga.add("Rp700.000");
+        totalHarga.add("Rp720.000");
+
+        prosesRecyclerViewAdapter();
     }
 }

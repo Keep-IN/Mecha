@@ -60,7 +60,8 @@
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/activity_vehicle_service.xml" value="0.125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_history.xml" value="0.1328125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_mecha_home.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_mecha_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_mecha_purchases.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_order.xml" value="0.1328125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_orders.xml" value="0.1328125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/fragment_purchases.xml" value="0.1328125" />
@@ -69,6 +70,7 @@
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/item_accepting_services.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/item_completed_orders.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/item_completed_purchases.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/item_purchased_history.xml" value="0.22" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/layout_error_dialog.xml" value="0.1328125" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/layout_success_dialog.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/layout_warning_dialog.xml" value="0.15520833333333334" />

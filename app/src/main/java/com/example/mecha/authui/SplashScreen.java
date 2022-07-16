@@ -8,6 +8,7 @@ import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mecha.R;
+import com.example.mecha.mecha.MechaMenuActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
+//                startActivity(new Intent(getApplicationContext(), MechaMenuActivity.class));
                 finish();
             }
         }, 3000L); //3000 L = 3 detik

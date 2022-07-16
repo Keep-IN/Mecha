@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 if (mAuth.getCurrentUser() != null) {
                     DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
