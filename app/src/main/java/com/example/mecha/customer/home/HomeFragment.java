@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mecha.R;
+import com.example.mecha.authui.LoginActivity;
+import com.example.mecha.mecha.AcceptingServicesActivity;
 
 public class HomeFragment extends Fragment {
 
