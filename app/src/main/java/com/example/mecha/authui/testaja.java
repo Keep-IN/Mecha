@@ -5,4 +5,5 @@ import android.widget.Button;
 public class testaja {
     Button bu;
     Button scsss;
+    Button test;
 }

@@ -1,5 +1,6 @@
 package com.example.mecha.mecha.mechaSettings;
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -22,7 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mecha.R;
+import com.example.mecha.authui.FakeSplashScreen;
 import com.example.mecha.authui.LoginActivity;
+import com.example.mecha.authui.SplashScreen;
 import com.example.mecha.customer.settings.ChangePasswordCustomerActivity;
 import com.example.mecha.customer.settings.SettingEditProfileActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -34,6 +37,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.jakewharton.processphoenix.ProcessPhoenix;
 import com.squareup.picasso.Picasso;
 
 public class MechaSettingsFragment extends Fragment {
@@ -145,10 +149,11 @@ public class MechaSettingsFragment extends Fragment {
                 public void onClick(View view) {
                     mAuth.signOut();
                     alertDialog.dismiss();
-
                     Toast.makeText(getActivity(), "Logging Out", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                    getActivity().finish();
+                    Intent i = new Intent(getActivity(), FakeSplashScreen.class);
+                    startActivity(i);
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    ProcessPhoenix.triggerRebirth(getActivity(), i);
                 }
             });
 

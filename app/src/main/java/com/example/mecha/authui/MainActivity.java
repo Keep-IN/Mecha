@@ -38,24 +38,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                if (mAuth.getCurrentUser() != null) {
-                    DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                    df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-                            if(documentSnapshot.getString("isMech")!=null){
-                                startActivity(new Intent(MainActivity.this, MechaMenuActivity.class));
-
-                                finish();
-                            }
-                            if(documentSnapshot.getString("isCustomer")!=null){
-                                startActivity(new Intent(MainActivity.this, CustomerMenuActivity.class));
-                                finish();
-                            }
-                        }
-                    });
-
-                }
+//                if (mAuth.getCurrentUser() != null) {
+//                    DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+//                    df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                        @Override
+//                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                            if(documentSnapshot.getString("isMech")!=null){
+//                                startActivity(new Intent(MainActivity.this, MechaMenuActivity.class));
+//
+//                                finish();
+//                            }
+//                            if(documentSnapshot.getString("isCustomer")!=null){
+//                                startActivity(new Intent(MainActivity.this, CustomerMenuActivity.class));
+//                                finish();
+//                            }
+//                        }
+//                    });
+//
+//                }
+//                mAuth.signOut();
                 startActivity(intent);
                 finish();
             }
