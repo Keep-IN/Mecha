@@ -49,6 +49,10 @@
         android:padding="15dp"
         android:text="Alamat"
         android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/namaCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btnCallMecha"

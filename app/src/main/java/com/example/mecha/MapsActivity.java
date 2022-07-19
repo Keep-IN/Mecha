@@ -1,6 +1,7 @@
 package com.example.mecha;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -30,7 +31,10 @@ import com.example.mecha.databinding.ActivityMapsBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -43,10 +47,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     private boolean oke = false;
-    TextView lat,lon,alamat;
+    TextView lat,lon,alamat,namaCustomer;
     Button callMechaBtn;
     FirebaseFirestore mstore;
     private FirebaseAuth mAuth;
+    String userid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +62,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         lat = findViewById(R.id.latitudemap);
         lon = findViewById(R.id.longitudemap);
         alamat = findViewById(R.id.alamatMap);
+        namaCustomer = findViewById(R.id.namaCustomer);
         callMechaBtn = findViewById(R.id.btnCallMecha);
         mAuth = FirebaseAuth.getInstance();
         mstore = FirebaseFirestore.getInstance();
@@ -105,15 +111,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     lon.setText(String.valueOf(location.getLongitude()));
                     alamat.setText(addressLines);
 
+                    userid= mAuth.getCurrentUser().getUid();
+                    DocumentReference documentReference = mstore.collection("Users").document(userid);
+                    documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                        @Override
+                        public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                            namaCustomer.setText(documentSnapshot.getString("Nama"));
+                        }
+                    });
+                    String ambilNama = namaCustomer.getText().toString();
+
                     callMechaBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
 
+
                             FirebaseUser user = mAuth.getCurrentUser();
                             DocumentReference df = mstore.collection("Order").document((user.getUid()));
                             Map<String,Object> userInfo = new HashMap<>();
-                            userInfo.put("Jenis Orderan","Mogok");
-                            userInfo.put("Alamat",addressLines);
+                            userInfo.put("nama",ambilNama);
+                            userInfo.put("jenisorderan","Mogok di jalan");
+                            userInfo.put("harga","Rp. 50000");
+                            userInfo.put("alamat",addressLines);
                             df.set(userInfo);
 
                             Intent paymentOrder = new Intent(MapsActivity.this, PaymentActivity.class);

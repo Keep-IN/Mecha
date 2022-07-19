@@ -11,6 +11,8 @@ import android.widget.Toast;
 import com.example.mecha.MapsActivity;
 import com.example.mecha.customer.CustomerMenuActivity;
 import com.example.mecha.R;
+import com.example.mecha.mecha.MechaMenuActivity;
+import com.example.mecha.mecha.mechaHome.MechaHomeFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -42,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             if(documentSnapshot.getString("isMech")!=null){
-                                startActivity(new Intent(MainActivity.this, CustomerMenuActivity.class));
-                                Toast.makeText(MainActivity.this, "Masuk Sebagai Mekanik", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(MainActivity.this, MechaMenuActivity.class));
+
                                 finish();
                             }
                             if(documentSnapshot.getString("isCustomer")!=null){

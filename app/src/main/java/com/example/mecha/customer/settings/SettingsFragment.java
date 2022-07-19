@@ -25,9 +25,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mecha.R;
+import com.example.mecha.authui.LoginActivity;
 import com.example.mecha.authui.SignUpCustomerActivity;
 import com.example.mecha.customer.CustomerMenuActivity;
 import com.example.mecha.customer.home.EmergencyFixActivity;
+import com.example.mecha.mecha.MechaMenuActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -45,6 +47,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+
+import java.util.Set;
 
 public class SettingsFragment extends Fragment {
 
@@ -203,8 +207,12 @@ public class SettingsFragment extends Fragment {
         view.findViewById(R.id.buttonYes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth.signOut();
                 alertDialog.dismiss();
                 Toast.makeText(getActivity(), "Logging Out", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(),LoginActivity.class));
+                getActivity().finish();
+
             }
         });
 

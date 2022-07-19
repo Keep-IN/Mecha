@@ -92,11 +92,11 @@ public class RecyclerViewAdapterAcceptingServices extends RecyclerView.Adapter<R
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             linearLayoutItemAcceptingServices = itemView.findViewById(R.id.linearLayoutItemAcceptingServices);
-            namaCustomerView = itemView.findViewById(R.id.namaCustomerView);
+            namaCustomerView = itemView.findViewById(R.id.nama);
             informasiKendaraanView = itemView.findViewById(R.id.informasiKendaraanView);
-            jenisPerbaikanView = itemView.findViewById(R.id.jenisPerbaikanView);
-            hargaPerbaikanView = itemView.findViewById(R.id.hargaPerbaikanView);
-            alamatPerbaikanView = itemView.findViewById(R.id.alamatPerbaikanView);
+            jenisPerbaikanView = itemView.findViewById(R.id.jenisorderan);
+            hargaPerbaikanView = itemView.findViewById(R.id.harga);
+            alamatPerbaikanView = itemView.findViewById(R.id.alamat);
             acceptingServicesLihat = itemView.findViewById(R.id.acceptingServicesLihat);
         }
     }

@@ -40,7 +40,7 @@
                     android:layout_gravity="center_vertical">
 
                     <TextView
-                        android:id="@+id/namaCustomerView"
+                        android:id="@+id/nama"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Ummi Arra"
@@ -82,7 +82,7 @@
                         android:layout_marginBottom="10dp"/>
 
                     <TextView
-                        android:id="@+id/jenisPerbaikanView"
+                        android:id="@+id/jenisorderan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mogok Dijalan"
@@ -109,7 +109,7 @@
                         android:layout_marginBottom="10dp"/>
 
                     <TextView
-                        android:id="@+id/hargaPerbaikanView"
+                        android:id="@+id/harga"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rp30.000"
@@ -164,7 +164,7 @@
                     app:layout_rowWeight="1">
 
                     <TextView
-                        android:id="@+id/alamatPerbaikanView"
+                        android:id="@+id/alamat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_semibold"

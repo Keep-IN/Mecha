@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     if(documentSnapshot.getString("isMech")!=null){
-                        startActivity(new Intent(LoginActivity.this, CustomerMenuActivity.class));
+                        startActivity(new Intent(LoginActivity.this, MechaMenuActivity.class));
                         Toast.makeText(LoginActivity.this, "Masuk Sebagai Mekanik", Toast.LENGTH_LONG).show();
                         finish();
                     }
@@ -148,12 +148,30 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
             return;
         }
         mAuth.signInWithEmailAndPassword(email, password)
+
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
+                        if (mAuth.getCurrentUser() != null) {
+                            DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                            df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                @Override
+                                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                    if(documentSnapshot.getString("isMech")!=null){
+                                        startActivity(new Intent(LoginActivity.this, MechaMenuActivity.class));
+                                        Toast.makeText(LoginActivity.this, "Masuk Sebagai Mekanik", Toast.LENGTH_LONG).show();
+                                        finish();
+                                    }
+                                    if(documentSnapshot.getString("isCustomer")!=null){
+                                        startActivity(new Intent(LoginActivity.this, CustomerMenuActivity.class));
+                                        finish();
+                                    }
+                                }
+                            });
+
+                        }
 //                        checkLevel(authResult.getUser().getUid());
-                        startActivity(new Intent(LoginActivity.this, CustomerMenuActivity.class));
-            finish();
+
                     }
                 });
 //        private void checkLevel (String uid){
