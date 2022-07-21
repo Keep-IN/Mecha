@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mecha.R;
+import com.example.mecha.authui.FakeSplashScreen;
 import com.example.mecha.authui.LoginActivity;
 import com.example.mecha.authui.SignUpCustomerActivity;
 import com.example.mecha.customer.CustomerMenuActivity;
@@ -46,6 +47,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.jakewharton.processphoenix.ProcessPhoenix;
 import com.squareup.picasso.Picasso;
 
 import java.util.Set;
@@ -210,8 +212,10 @@ public class SettingsFragment extends Fragment {
                 mAuth.signOut();
                 alertDialog.dismiss();
                 Toast.makeText(getActivity(), "Logging Out", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(),LoginActivity.class));
-                getActivity().finish();
+                Intent i = new Intent(getActivity(), FakeSplashScreen.class);
+                startActivity(i);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                ProcessPhoenix.triggerRebirth(getActivity(), i);
 
             }
         });

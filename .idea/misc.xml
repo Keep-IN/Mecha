@@ -75,12 +75,15 @@
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/layout_success_dialog.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/PUTRA/Downloads/Massive Grup 1/Mecha/app/src/main/res/layout/layout_warning_dialog.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/PUTRA/Downloads/Mecha/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_call_mecha.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_customer_menu.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_forgot_password.xml" value="0.1597222222222222" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_login.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_choose_role.xml" value="0.1" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_customer.xml" value="0.22" />
         <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/activity_sign_up_mech.xml" value="0.1597222222222222" />
+        <entry key="..\:/Users/uzi/AndroidStudioProjects/Mecha/app/src/main/res/layout/fragment_home.xml" value="0.14749893116716545" />
       </map>
     </option>
   </component>

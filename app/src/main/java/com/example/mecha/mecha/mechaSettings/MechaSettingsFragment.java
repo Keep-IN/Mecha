@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 import com.example.mecha.R;
 import com.example.mecha.authui.FakeSplashScreen;
 import com.example.mecha.authui.LoginActivity;
+import com.example.mecha.authui.MainActivity;
 import com.example.mecha.authui.SplashScreen;
 import com.example.mecha.customer.settings.ChangePasswordCustomerActivity;
 import com.example.mecha.customer.settings.SettingEditProfileActivity;
@@ -147,6 +149,7 @@ public class MechaSettingsFragment extends Fragment {
             view.findViewById(R.id.buttonYes).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     mAuth.signOut();
                     alertDialog.dismiss();
                     Toast.makeText(getActivity(), "Logging Out", Toast.LENGTH_SHORT).show();
